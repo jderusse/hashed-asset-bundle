@@ -15,7 +15,7 @@ final class CachedHasher implements AssetHasherInterface
         $this->cache = $cache;
     }
 
-    public function computeHash(string $path): string
+    public function computeHash($path)
     {
         // The hashing implementation does not care about leading slashes in the path, so share cache keys for them
         $item = $this->cache->getItem(base64_encode(ltrim($path, '/')));

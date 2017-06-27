@@ -18,7 +18,7 @@ final class HashCacheWarmer implements CacheWarmerInterface
     private $hasher;
     private $fallbackPool;
 
-    public function __construct(AssetFinder $assetFinder, string $cacheFile, AssetHasherInterface $hasher, CacheItemPoolInterface $fallbackPool)
+    public function __construct(AssetFinder $assetFinder, $cacheFile, AssetHasherInterface $hasher, CacheItemPoolInterface $fallbackPool)
     {
         $this->assetFinder = $assetFinder;
         $this->cacheFile = $cacheFile;

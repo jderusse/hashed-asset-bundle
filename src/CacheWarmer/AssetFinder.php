@@ -9,12 +9,12 @@ class AssetFinder
 {
     private $webRoot;
 
-    public function __construct(string $webRoot)
+    public function __construct($webRoot)
     {
         $this->webRoot = $webRoot;
     }
 
-    public function getAssetPaths(): \Traversable
+    public function getAssetPaths()
     {
         $finder = (new Finder())->files()
             ->in($this->webRoot);
